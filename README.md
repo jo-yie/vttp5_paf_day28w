@@ -1,7 +1,7 @@
 # Day 28 Workshop 
 ## Monday 3 Feb 2025 
 
-MongoDB Aggregation Operations
+MongoDB Aggregation Operations: `$match`, `$lookup`, `$limit`, `$unwind`, `$sort`, `$group`
 
 ### **GET /game/`<GAME_ID>`/reviews**
 
@@ -10,7 +10,9 @@ MongoDB Aggregation Operations
 ### **GET /games/lowest**
 
 
-- Additional Helper Endpoints 
+
+
+- Additional Helper Endpoints: 
 
 ### **GET /game/`<GAME_ID>`**
 
