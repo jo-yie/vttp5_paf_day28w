@@ -1,7 +1,13 @@
 # Day 28 Workshop 
 ## Monday 3 Feb 2025 
 
-MongoDB Aggregation Operations: `$match`, `$lookup`, `$limit`, `$unwind`, `$sort`, `$group`
+MongoDB Aggregation Operations:
+- `$match`
+- `$lookup`
+- `$limit`
+- `$unwind`
+- `$sort`
+- `$group`
 
 ### **GET /game/`<GAME_ID>`/reviews**
 
