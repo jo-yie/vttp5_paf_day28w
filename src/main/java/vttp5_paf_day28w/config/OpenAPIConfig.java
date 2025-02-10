@@ -14,7 +14,7 @@ public class OpenAPIConfig {
 
         return new OpenAPI().info(
             new Info()
-            .title("PAF Day 18 Workshop")
+            .title("PAF Day 28 Workshop")
             .description("Testing API using OpenAPI public interface")
             .version("1.0")
         );

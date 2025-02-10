@@ -76,5 +76,27 @@ public class GameController {
 
     }
 
+    // TASK B 
+    // GET /games/highest OR /games/lowest 
+    // Accept: application/json 
+    @GetMapping("/games/highest")
+    public ResponseEntity<Object> getGameByHighestRating() {
+
+        boolean isHighest = true;
+
+        return ResponseEntity.ok()
+            .body(gameService.getGamesByRating(isHighest));
+
+    }
+
+    @GetMapping("/games/lowest") 
+    public ResponseEntity<Object> getGameByLowestRating() {
+
+        boolean isHighest = false; 
+
+        return ResponseEntity.ok()
+            .body(gameService.getGamesByRating(isHighest));
+
+    }
     
 }

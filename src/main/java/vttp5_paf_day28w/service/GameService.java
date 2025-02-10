@@ -9,8 +9,11 @@ import java.util.Optional;
 import org.bson.Document;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import vttp5_paf_day28w.model.GameAndReviews;
+import vttp5_paf_day28w.model.GameByRating;
 import vttp5_paf_day28w.repo.GameRepo;
 
 @Service
@@ -82,6 +85,26 @@ public class GameService {
     public Optional<Document> getReviewById(String review_id) {
 
         return gameRepo.getReviewById(review_id);
+
+    }
+
+    // TASK B 
+    public GameByRating getGamesByRating(boolean isHighest) {
+
+        GameByRating g = new GameByRating(); 
+
+        if (isHighest) {
+            g.setRating("highest");
+        } else {
+            g.setRating("lowest");
+        }
+
+        List<Document> games = gameRepo.getGamesByRating(isHighest);
+        g.setGames(games);
+
+        g.setTimestamp(new Date());
+
+        return g;
 
     }
 
